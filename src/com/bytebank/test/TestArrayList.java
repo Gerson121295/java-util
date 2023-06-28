@@ -15,8 +15,11 @@ public class TestArrayList {
         //ArrayList lista = new ArrayList(); //<> Operador diamante.
         ArrayList <Cuenta> lista = new ArrayList();
         //<> Operador diamante: decir: Un Arraylist del tipo Cuenta: <> Fuerza para que acepte un tipo de objeto.
-        Cuenta cc = new CuentaCorriente(11, 22);
-        Cuenta cc2 = new CuentaCorriente(13, 42);
+
+        //Referencia | objeto --> se guarda en la memoria Heap
+        Cuenta cc    = new CuentaCorriente(11, 22);
+        Cuenta cc2   = new CuentaCorriente(13, 42);
+        Cuenta cc3   = new CuentaCorriente(11, 22);
 
         lista.add(cc);
         lista.add(cc2);
@@ -39,6 +42,13 @@ public class TestArrayList {
          for (Cuenta cuenta : lista){ //Por cada cuenta en la lista imprime esto.
         System.out.println(cuenta);
         }
+
+        System.out.println("\n");
+         //Verificar si la lista contiene un elemento
+        boolean contiene = lista.contains(cc3);
+         if(contiene){
+             System.out.println("Si exite");
+         }
 
     }
 }
