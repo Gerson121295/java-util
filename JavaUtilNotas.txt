@@ -220,7 +220,7 @@ Acerca de listas:
 - Las listas son secuencias(tienen índice): Todas las listas tienen un índice, es decir, son secuencias.
 
 ------------------- 06 Las Clases Wrappers ----------------------------------
-los tipo de datos primitivos (int, char) guarda el valor que se le da al objeto
+los tipo de datos primitivos (int, char) guarda el valor que se le da al objeto.
 Un objeto como un String guarda la referencia de la memoria head
 
 
