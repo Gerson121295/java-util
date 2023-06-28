@@ -173,10 +173,11 @@ siguiente nodo y al nodo anterior.
 
 
 			 	    java.util.List
-				   /  	    |	  \
-		java.util.ArrayList	    |	   java.util.Vector
-					    |
-				     java.util.LinkedList(lista anexada)
+				   /  |	    |	  \
+		java.util.ArrayList   |	    |	   java.util.Vector
+				      |     |
+				      |     java.util.LinkedList(lista anexada)
+		    java.util.Collection
 
 
 El paquete java.util es extremadamente importante en el desarrollo de Java. 
@@ -203,6 +204,25 @@ ArrayList:
 LinkedList:
 - Inserción y eliminación con performance en cualquier posición, también al inicio.
 - Acceso más lento por el índice, es necesario investigar los elementos.
+
+
+-------------------   05 Vector e Interfaz Collection -------------------
+ Sobre Vector:
+- Vector es threadsafe: Esta es la gran diferencia entre ArrayList y Vector.
+- Vector también usa un array: como ArrayList, Vector también usa una matriz por debajo.
+- Vector es una lista: Vector implementa la interfaz List.
+
+
+-Superclase Collection:
+Acerca de listas:
+- Las listas son colecciones: cualquier lista también es una colección (java.util.Collection).
+- Las listas garantizan el pedido de inserción: En la iteración los elementos aparecen en el orden de inserción.
+- Las listas son secuencias(tienen índice): Todas las listas tienen un índice, es decir, son secuencias.
+
+
+
+
+
 
 
 

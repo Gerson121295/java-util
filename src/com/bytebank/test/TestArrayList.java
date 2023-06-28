@@ -4,10 +4,7 @@ import com.bytebank.modelo.Cliente;
 import com.bytebank.modelo.Cuenta;
 import com.bytebank.modelo.CuentaCorriente;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
 public class TestArrayList {
     public static void main(String[] args) {
@@ -24,8 +21,11 @@ public class TestArrayList {
         //List<Cuenta> lista = new LinkedList<>(); //Implementacion de list --java.util para la practica de vectores.
 
         //Es obligatorio especificar el tipo de lista en el primer <>, en el segundo<> no es obligatorio pero se puede hacer.
-        List<Cuenta> lista = new Vector<>();//vector un unico objeto para todas las pilas de ejecucion.
+        //List<Cuenta> lista = new Vector<>();//vector un unico objeto para todas las pilas de ejecucion.
         //El vector ya no es muy usado, porque es Thread safe.
+
+        List<Cuenta> lista = new ArrayList<>(); //usando Collection
+
 
         //<> Operador diamante: decir: Un Arraylist del tipo Cuenta: <> Fuerza para que acepte un tipo de objeto.
 
