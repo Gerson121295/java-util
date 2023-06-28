@@ -177,4 +177,26 @@ public abstract class Cuenta {
         this.numero = numero;
     }
 
+    @Override
+    public String toString() {
+        String cuenta = "Numero: "+this.numero+ ", Agencia: "+agencia;
+        return cuenta;
+    }
+
+    //Metodo Artesanal para comparar: no evalua referencias si no la informacion que recibe la cuenta como parametros.
+    public boolean esIgual(Cuenta cuenta){//recibe un parametro con la que la va a comparar, como lo vamos a comparar con una cuenta le enviamos la cuenta.
+    return this.agencia == cuenta.getAgencia() &&
+            this.numero == cuenta.getNumero();
+    }
+
+    //Metodo de Java que permite comparar si son igules
+    @Override //Para indicar que se esta sobreescribiendo el metodo equals.
+    public boolean equals(Object obj) {
+        Cuenta cuenta = (Cuenta) obj; //Cuenta es igual al objeto que esta llegando. Se castea para decir al obj que es una Cuenta.
+        return this.agencia == cuenta.getAgencia() && //Esta agencia es igual a la agencia que llega por parametro.
+                this.numero == cuenta.getNumero(); //Este numero es igual al numero numero que llega por parametro.
+    }
+
+
+
 }

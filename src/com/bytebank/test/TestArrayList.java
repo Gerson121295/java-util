@@ -44,11 +44,18 @@ public class TestArrayList {
         }
 
         System.out.println("\n");
-         //Verificar si la lista contiene un elemento
-        boolean contiene = lista.contains(cc3);
-         if(contiene){
-             System.out.println("Si exite");
+
+         //Verificar si la lista contiene un elemento.
+        boolean contiene = lista.contains(cc3); //utiliza contains que tiene el metodo Equals el cual se declaro y sobreescribio en cuenta.
+         if(contiene){//Compara por referencia.
+             System.out.println("Si, es igual (equals).");
          }
+
+         //Este metodo no es necesario porque el Equals ya hace ese trabajo.
+      //   if(cc.esIgual(cc3)){ //Compara por Valores, Verifica si las cuentas son iguales.
+        //     System.out.println("Si, son iguales.");
+         //}
+
 
     }
 }

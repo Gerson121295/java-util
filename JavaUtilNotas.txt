@@ -137,12 +137,22 @@ Aprendimos:
  -----------------    04. Equals y mas listas -----------------
 
 -- Comparando Elementos
+El método equals, junto con los métodos toString y hashCode, es uno de los métodos 
+fundamentales de la clase Object.
 
+¿Cuál es la firma correcta para este método? 
+- public boolean equals(Object ref)
+- es público, devuelve boolean y recibe un Objeto.
 
+¿Qué es cierto sobre el método equals?
+- Debemos sobreescribir para definir el criterio de igualdad.
+Debemos sobreescribir el método equals para definir la igualdad del objeto.
+En general, existen los métodos equals, toString y hashCode para sobreescribir.
 
+- La implementación estándar compara las referencias.
+La implementación del método equals de la clase Object compara solo las referencias.
 
-
-
+- Está definido en la clase Object.
 
 
 
