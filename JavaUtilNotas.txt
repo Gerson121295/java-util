@@ -26,7 +26,7 @@ operaciones.
 El nombre de la variable args significa argumentos en plural, es una abreviación de arguments.
 
 
--- 01 Conociendo Arrays
+----------------------   01 Conociendo Arrays    ----------------------
 
 //un array es un conjunto de datos en una misma estructura de datos, 
 Para acceder a él yo necesito explicarle en qué índice está el valor al que yo deseo o 
@@ -39,6 +39,14 @@ Los índices comienzan por 0.
 
 int [] edades = new int[5]; // Declaracion de Variable que engloba todas las edades, todo array debe tener un valor fijo.
 edades[2] = 30;  //En el indice 2 se guada el valor 30.
+
+ Objetos
+¿Por qué referencias? Porque recordemos que las variables de los objetos son 
+simplemente referencias a estos objetos en la memoria heap.
+
+CuentaCorriente[] cuentas = new CuentaCorriente[5];
+
+
 
 
 

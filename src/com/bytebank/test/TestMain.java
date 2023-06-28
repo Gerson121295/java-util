@@ -19,9 +19,17 @@ public class TestMain {
         System.out.println(edades[2]);
         System.out.println(edades[0]);
 
-    }
+        //un array es un conjunto de datos en una misma estructura de datos,
 
-    //un array es un conjunto de datos en una misma estructura de datos,
+        int tamanioArray = edades.length; //length para ver el tamaño del array
+        System.out.println(tamanioArray);
+
+        System.out.println("---Impresion del array en ciclo for");
+        for (int i = 0; i<tamanioArray; i++){
+            System.out.println("Posicion "+ i + " dato " +edades[i]);
+        }
+
+    }
 
 }
 
