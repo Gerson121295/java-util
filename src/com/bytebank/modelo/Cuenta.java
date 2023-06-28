@@ -38,7 +38,7 @@ public abstract class Cuenta {
         this.agencia = agencia;
         this.numero = numero;
         //System.out.println("Cuenta No. "+ total + " creadas");
-        System.out.println("Estoy creando una cuenta "+ this.numero);
+        System.out.println("Estoy creando una cuenta, No. "+ this.numero+ " agencia: "+agencia);
         Cuenta.total ++;
     }
 
@@ -167,4 +167,14 @@ public abstract class Cuenta {
     public static int getTotal(){
         return Cuenta.total; //Acceder a la variable total desde un metodo
     }
+
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
 }

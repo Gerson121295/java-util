@@ -82,7 +82,56 @@ Cuenta Cuenta = (Cuenta) cc1; //cast explícito mas desnecessário
 
 
 
+Una lista también es un conjunto de objetos que pueden ser del mismo tipo, pero es un 
+conjunto de objetos agrupados en un objeto mayor, esa es una lista.
 
+El ArrayList de Java.util el paquete Java.util se llama así: ArrayList lista = new ArrayList();
+//<> Operador diamante
+
+        //ArrayList nos permite usar diferentes metodos evitando
+        //crear clases como la de GuardarCuentas o GuardarReferencias.
+        //ArrayList todos los datos que se ingresan se guardan en orden como se ingresan en los indices
+        
+
+Las desventajas señaladas al usar arrays:
+-El array tiene un tamaño fijo (no puede crecer dinámicamente): Una vez creada, el 
+array siempre tendrá el mismo tamaño de elemento. Esto es muy malo cuando no sabemos 
+exactamente cuántos elementos necesitamos conservar.
+
+-El array no sabe cuántas posiciones están ocupadas (solo tamaño total): Ésta es una 
+gran desventaja. No queremos saber cuántos elementos puede tener un array, sino cuántos 
+elementos existen realmente en el array.
+
+- Sintaxis fuera del estándar "OO Java":Los arrays tienen su propia sintaxis, lo que 
+dificulta la lectura del código.
+
+
+
+Ve las siguientes afirmaciones acerca de Arraylist.
+A) Conserve las referencias.
+B) Es del paquete java.util
+C) Utiliza un array internamente
+D) Al inicializar no es necesario definir el tamaño.
+
+¿Cuántos elementos puede guardar un objeto de tipo java.util.ArrayList?
+el único límite es la memoria de la JVM.
+
+
+ArrayList<Cliente> lista = new ArrayList<Cliente>();
+parametrizamos ArrayList usando <>. Hay una variación/simplificación que se incluyó 
+en Java 1.7. El siguiente código es equivalente a la alternativa:
+
+ArrayList<Cliente> lista = new ArrayList<>();
+
+Aprendimos:
+- Que la clase java.util.ArrayList encapsula el uso de array y ofrece varios métodos 
+   de más alto nivel.
+- Que una lista guarda referencias.
+- Cómo usar los métodos size, get, remove.
+- Cómo usar foreach para iterar a través de ArrayList.
+- Que los generics parametrizan clases
+- Que en el caso de ArrayList podemos definir el tipo de los elementos mediante 
+  generics.
 
 
 
