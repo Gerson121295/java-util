@@ -223,6 +223,27 @@ Acerca de listas:
 los tipo de datos primitivos (int, char) guarda el valor que se le da al objeto.
 Un objeto como un String guarda la referencia de la memoria head
 
+¿Cuál es el tipo primitivo de este wrapper?
+Lo interesante es que el char es casi un tipo numérico. Tiene dos bytes, al igual que 
+el tipo short, pero no usa el primer bit para almacenar el signo. En otras palabras, 
+el char solo almacena números positivos. Esto significa que el char puede almacenar 
+valores entre 0 y 65536 (2 ^ 16).
+
+¿Qué son los Wrappers?
+¡Son clases que contienen funcionalidades y encapsulan la variable de tipo primitivo!
+creamos objetos de esas clases para envolver o envolver un valor primitivo.
+
+En esta clase nos enfocamos en las clases deWRAPPERS y aprendimos que.
+- Para cada primitivo hay una clase llamada Wrapper.
+- Para almacenar un primitivo en una colección, necesita crear un objeto que envuelva el valor.
+- La creación del objeto Wrapper se llama autoboxing.
+- La extracción del valor primitivo del objeto Wrapper se llama unboxing.
+- El autoboxing y unboxing ocurren automáticamente.
+- Las clases wrapper tienen varios métodos auxiliares, por ejemplo para el parsing.
+- Todas las clases wrappers que representan un valor numérico tienen la clase java.lang.Number como madre.
+
+
+
 
 
 

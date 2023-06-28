@@ -51,5 +51,7 @@ public class TestRepasoArray {
         System.out.println(Integer.SIZE); //retorna el dato en bits
         System.out.println(Integer.BYTES);//Retorna el dato en BYTES
 
+
+
     }
 }
