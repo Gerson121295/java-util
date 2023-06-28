@@ -155,6 +155,56 @@ La implementación del método equals de la clase Object compara solo las refere
 - Está definido en la clase Object.
 
 
+--Listas Anexadas: java.util.LinkedList
+
+¿Y qué es el LinkedList o también llamado lista anexada? Lista anexada es otra 
+estructura de datos.
+Esto ya no es un array, pero también es una lista.
+El LinkedList no es un arreglo, sino es un conjunto de objetos en el cual cada objeto 
+que existe aquí sabe quién es su objeto anterior. 
+
+Por ejemplo, cc1 conoce a cc2, él sabe que después de él sigue cc2, y cc2 conoce a cc1, 
+tienen referencia entre ellos. Dentro de LinkedList él ya tiene referencias al 
+siguiente nodo y al nodo anterior.
+
+
+
+-----  Java.util
+
+
+			 	    java.util.List
+				   /  	    |	  \
+		java.util.ArrayList	    |	   java.util.Vector
+					    |
+				     java.util.LinkedList(lista anexada)
+
+
+El paquete java.util es extremadamente importante en el desarrollo de Java. 
+Al respecto podemos decir que:
+
+- Todas las listas garantizan el orden de inserción.
+ Las listas garantizan el orden de inserción. Esto significa que al iterar recibimos los
+ elementos en el mismo orden en que fueron insertados.
+
+-List es una interface, ArrayList y LinkedList son implementaciones.
+-Todas las listas tienen un índice.
+las listas siempre tienen un índice (podemos acceder al elemento a través de la posición).
+Además, hay una característica más: la lista acepta elementos duplicados, pero hablaremos 
+de eso un poco más adelante.
+
+LinkedList y ArrayList son dos implementaciones diferentes de la interfaz List. 
+LinkedList es una lista doblemente "enlazada" y ArrayList representa un array con 
+redimensión de tamaño dinámico.
+
+Características con las implementaciones::
+ArrayList: 
+- Acceso fácil y de rendimiento por el índice.
+- Los elementos deben copiarse cuando no hay más capacidad.
+LinkedList:
+- Inserción y eliminación con performance en cualquier posición, también al inicio.
+- Acceso más lento por el índice, es necesario investigar los elementos.
+
+
 
 
 

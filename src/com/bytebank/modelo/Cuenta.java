@@ -192,6 +192,7 @@ public abstract class Cuenta {
     //Metodo de Java que permite comparar si son igules
     @Override //Para indicar que se esta sobreescribiendo el metodo equals.
     public boolean equals(Object obj) {
+        //Comparacion basada en valores
         Cuenta cuenta = (Cuenta) obj; //Cuenta es igual al objeto que esta llegando. Se castea para decir al obj que es una Cuenta.
         return this.agencia == cuenta.getAgencia() && //Esta agencia es igual a la agencia que llega por parametro.
                 this.numero == cuenta.getNumero(); //Este numero es igual al numero numero que llega por parametro.
