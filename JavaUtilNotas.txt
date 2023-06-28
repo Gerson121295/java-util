@@ -1,0 +1,52 @@
+
+
+
+-- Java y Java util --
+ Collections, Wrappers y Lambda expressions
+
+Todo esto se basa en diferentes estructuras de datos, como arreglos de datos, cuando 
+tenemos varios datos de un solo tipo, varios objetos, podemos agruparlos en un objeto 
+digamos un poco mayor, y a la vez trabajar con los métodos que heredamos de la clase 
+object.
+
+Wrappers son objetos que engloban otros objetos para aplicar técnicas de encapsulamiento 
+y esconder los atributos propios de cada objeto también. 
+
+¿Qué son lambda expressions?
+es un tipo de funciones de programación, pero que se ejecutan en un contexto separado.
+
+El paquete Java.lang, es el paquete pues donde están las principales clases de Java,
+ como por ejemplo, clase object, clase string. Entonces, el paquete Java.lang no 
+necesitamos ni siquiera importarlo. Porque automáticamente pues es la base de todo el lenguaje.
+
+El paquete Java.util: n programación son llamados los utilitarios, que son estructuras 
+de datos, son objetos que nos van a simplificar un poco la vida para realizar diferentes
+operaciones.
+
+El nombre de la variable args significa argumentos en plural, es una abreviación de arguments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
