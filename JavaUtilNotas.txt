@@ -47,6 +47,43 @@ simplemente referencias a estos objetos en la memoria heap.
 CuentaCorriente[] cuentas = new CuentaCorriente[5];
 
 
+----------------   Guardando Referencias  ----------------
+
+--  Cast Objetos #1
+Los arrays son una estructura de datos en la que podemos almacenar varios valores, 
+varias referencias a un mismo tipo de datos, a un mismo objeto, en la misma estructura.
+
+Con el tipo object, de todas formas, está compilando todo mi código.
+Porque object es el más absorbente de todos los objetos. 
+
+castear objetos, castear significa indicarle a Java que estos objetos son del tipo que tú le estás indicando acá. 
+
+int numero = 3;
+double valor = numero; //cast implícito
+
+int numero = 3;
+double valor = (double) numero; //cast explícito
+
+double valor = 3.56;
+int numero = (int) valor; //cast explícito es exigido por el compilador
+
+
+En las referencias, se aplica el mismo principio. Si el cast siempre funciona no es 
+necesario hacerlo explícito, por ejemplo:
+
+CuentaCorriente cc1 = new CuentaCorriente(22, 33);
+Cuenta cuenta = cc1; //cast implícito
+
+podría ser explícito, pero nuevamente, el compilador no lo requiere porque cualquier 
+CuentaCorriente es una Cuenta:
+
+CuentaCorriente cc1 = new CuentaCorriente(22, 33);
+Cuenta Cuenta = (Cuenta) cc1; //cast explícito mas desnecessário
+
+
+
+
+
 
 
 
