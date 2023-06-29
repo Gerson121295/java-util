@@ -305,6 +305,9 @@ En la lista en el método de sort
 En la clase Collections por el método sort
 La clase Collections es una fachada con varios métodos auxiliares para trabajar con colecciones, principalmente listas.
 
+¿Cómo llamamos a este objeto que solo encapsula una función / método / procedimiento?
+Function Object: Un objeto que creamos para encapsular una función o método. 
+Las clases anónimas facilitan la creación de estos objetos.
 
 
 

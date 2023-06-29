@@ -50,10 +50,21 @@ public class TestOrdenarListaOrdenNatural {
         //Ordenar las cuentas: ¿Que tipo de orden quiero?
         //Comparator <? extend Cuenta> = Cualquier clase hija de cuenta o la cuenta. //Comparator es la interfaz
 
+        //Forma 1:Instanciar una interfaz
         Comparator<Cuenta> comparator = new OrdenadorPorNumeroCuenta3();
-
         //   lista.sort(c);//espera cualquier cosa que extienda de cuenta
-        lista.sort(comparator);//sort recibe una implementacion de la interfaz comparator
+        // lista.sort(comparator);//sort recibe una implementacion de la interfaz comparator //Este usa la clase: OrdenadorPorNumeroCuenta3 de abajo
+
+        //forma 2 Clase anonima: Permite definir el metodo y la funcionalidad para ordenar aqui mismo. Ya que el sort permite una interface de comparator
+        //Esas clases que se le agrega donde se necesita el codigo se llama clase anonima.
+        //Las clases anonimas se crean las hace java, pero no lo hacemos nosotros.
+        lista.sort(new Comparator<Cuenta>() { //una interfaz nunca se puede instanciar
+            @Override
+            public int compare(Cuenta o1, Cuenta o2) {
+                //usando forma 3 de Wrappers //Codigo estan en las clase OrdenadorPorNumeroCuenta3 de abajo.
+                return Integer.compare(o1.getNumero(), o2.getNumero()); //Integer.compare(x,y); donde x = primer No.Cuenta, y=2do. No. CUenta.
+            }
+        });
 
         System.out.println("\n---Impresion Despues de ordenar ---");
         for (Cuenta cuenta : lista){
@@ -62,7 +73,8 @@ public class TestOrdenarListaOrdenNatural {
 
         //Comparador de cuenta por Orden alfabetico de Nombre de titular
         //Comparator<Cuenta> comparatorNombreTitular = new OrdenadorPorNombreTitular2();
-        //lista.sort(comparatorNombreTitular);//sort recibe una implementacion de la interfaz comparator
+        //lista.sort(comparatorNombreTitular);  //sort recibe una implementacion de la interfaz comparator
+
 
         //Orden Natural: sin instanciar una interfaz, solo se llama como parametro.
         lista.sort(new OrdenadorPorNombreTitular());//sort recibe una implementacion de la interfaz comparator
@@ -76,11 +88,30 @@ public class TestOrdenarListaOrdenNatural {
         //Forma antigua de Ordenar
 
         //Orden Natural: para java 8, 7 o menores.
-        Collections.sort(lista, new OrdenadorPorNombreTitular()); //recibe la lista y un metodo ordenador.
+        Collections.sort(lista, new OrdenadorPorNombreTitular2()); //recibe la lista y un metodo ordenador. //implementacion de la interfaz
           System.out.println("\n---Impresion ordena por orden alfabetico Nombre de Titular usa Collections. ---");
         for (Cuenta cuenta : lista){
             System.out.println(cuenta);
         }
+
+        //No es necesario instanciar una clase o enviarle un metodo ordenador si no que se implementa la interface Comparator
+        //Orden Natural: para java 8, 7 o menores.
+        //Esas clases que se le agrega la funcionalida, donde se necesita el codigo se llama clase anonima.
+        Collections.sort(lista, new Comparator<Cuenta>() {
+            @Override
+            public int compare(Cuenta o1, Cuenta o2) {
+                return o1.getTitular().getNombre()
+                        //compareTo retorna un entero.
+                        .compareTo(o2.getTitular().getNombre()); //utiliza el metodo compareTo para comparar el otro nombre titular
+            }
+        });
+        System.out.println("\n--- new Comparator ---");
+        System.out.println("\n---Impresion ordena por orden alfabetico Nombre de Titular usa Collections. ---");
+        for (Cuenta cuenta : lista){
+            System.out.println(cuenta);
+        }
+
+
 
         //Orden Natural: Solo se le envia la lista - para java 8, 7 o menores.
         Collections.sort(lista); //SI usamos el orden natural y solo enviamos la lista debemos ir a la class cuenta para especificar el orden, el cual en Cuenta se debe de implementar Comparable (implements Comparable<Cuenta> e implementar su metodo)
@@ -91,6 +122,11 @@ public class TestOrdenarListaOrdenNatural {
 
     }
 }
+
+
+//Estas clases funcionan pero no pueden ser usadas como objetos rompen la POO.
+//Estas clases son de ejemplo, ya que el algoritmo de comparacion
+//se puede implementa directamente donde se solicita, comparar.
 
 //Ordenador por numero de cuenta.
 class OrdenadorPorNumeroCuenta3 implements Comparator<Cuenta> {
