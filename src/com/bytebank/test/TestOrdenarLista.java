@@ -39,7 +39,7 @@ public class TestOrdenarLista {
         Comparator<Cuenta> comparator = new OrdenadorPorNumeroCuenta();
 
         //   lista.sort(c);//espera cualquier cosa que extienda de cuenta
-        lista.sort(comparator);
+        lista.sort(comparator);//sort recibe una implementacion de la interfaz comparator
 
         System.out.println("---Impresion Despues de ordenar ---");
         for (Cuenta cuenta : lista){

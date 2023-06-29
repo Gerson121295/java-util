@@ -179,7 +179,8 @@ public abstract class Cuenta {
 
     @Override
     public String toString() {
-        String cuenta = "Numero: "+this.numero+ ", Agencia: "+agencia;
+        String cuenta = "Numero: "+this.numero+ ", Agencia: "+agencia
+                +" Titular: "+ this.titular.getNombre();
         return cuenta;
     }
 
