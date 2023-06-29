@@ -7,7 +7,7 @@ package com.bytebank.modelo;
  * @author Gerson121295
  */
 
-public abstract class Cuenta {
+public abstract class Cuenta implements Comparable<Cuenta> { //Comparable<Cuenta> para ordenar las lista, interfaz de java.lang
     //private double saldo; //cambio a private : encapsulamiento para que no se pueda obtener y modificar sin usar el metodo set o get
     protected double saldo; //Protected saldo es accesible desde las clases hijas.
     private int agencia;
@@ -199,6 +199,13 @@ public abstract class Cuenta {
                 this.numero == cuenta.getNumero(); //Este numero es igual al numero numero que llega por parametro.
     }
 
-
-
+    //Metodo de la interfaz Comparable: Para ordenar por agencia
+    @Override
+    public int compareTo(Cuenta o) {
+        //Orden Natural: Numero Agencia
+        //Para ordenar se pueden usar diferentes formas vistas usando: if, resta o wrappers (TestOrdenarLista2Wrappers)
+        //return Integer.compare(this.agencia, o.getAgencia());
+        //orden Natural por saldo
+        return  Double.compare(this.getSaldo(), o.getSaldo());
+    }
 }

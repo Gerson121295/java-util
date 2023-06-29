@@ -243,8 +243,67 @@ En esta clase nos enfocamos en las clases deWRAPPERS y aprendimos que.
 - Todas las clases wrappers que representan un valor numérico tienen la clase java.lang.Number como madre.
 
 
+---------------------- 07 Ordenando Listas ------------------
+
+InterfazFuncional son aquellas que tienen un solo metodo, para implementar, un ejemplo
+es el compare.
+
+En el mundo de Java, existen dos interfaces para definir los criterios para ordenar 
+los elementos de una lista. Las interfaces son:
+ - java.lang.Comparable  - para definir el orden natural de los elementos
+ - java.util.Comparator  - el comparator es un parámetro del método sort de la lista y de la clase Collections.
+
+En el contexto de la lección, ¿qué significa orden natural?
+Es el orden definido por el propio elemento de la lista. En nuestro ejemplo, la clase 
+Cuenta define sus propios criterios de ordenación implementando la interfaz java.lang.Comparable
+En este caso, no se utiliza ningún Comparator.
 
 
+-Investigue en la documentación oficial de la clase Collections dentro del paquete java.util:
+
+¿Cómo podemos invertir el orden de una lista?
+Para invertir el orden de la lista, puede utilizar el método reverse de la clase Collections:
+Collections.reverse(lista);
+
+¿Cómo podemos mezclar todos los elementos de una lista?
+Para mezclar existe el método shuffle: Collections.shuffle(lista);
+
+¿Cómo podemos rotar los elementos de una lista?
+Para girar existe el método de rotate: 
+Collections.rotate(lista, 5); //rotar 5 posiciones
+
+
+Ordenar arrays tampoco es difícil, solo use el método de ordenación de la clase Arrays. 
+La clase Arrays es similar a Collections en el sentido de que también une varios métodos 
+de utilidad:
+
+import java.util.Arrays;
+
+public class TestSortArrays
+{
+    public static void main(String[] args)
+    {
+        int[] numeros = new int[]{43, 15, 64, 22, 89};
+
+        Arrays.sort(numeros); //método utilitário sort
+
+        System.out.println(Arrays.toString(numeros)); //método utilitário toString
+
+        //Salida : [15, 22, 43, 64, 89]
+    }
+}
+
+
+En esta clase fundamental e importante aprendimos que:
+
+Para ordenar una lista necesita definir un criterio de ordenación
+Hay dos formas de definir este criterio
+A través de la interfaz del comparador
+A través de la interfaz Comparable (orden natural)
+El algoritmo de ordenación ya se ha implementado
+En la lista en el método de sort
+En la clase Collections por el método sort
+La clase Collections es una fachada con varios métodos auxiliares para trabajar con colecciones, principalmente listas.
 
 
 
